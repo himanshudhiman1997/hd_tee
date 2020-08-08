@@ -1,3 +1,5 @@
 class Strings{
-  static var companyName = 'Hd Tee';
+  static var companyName = 'Brothers Stop';
+
+  static var browseNGet = 'BROWSE AND GET YOUR FAVOURITE';
 }

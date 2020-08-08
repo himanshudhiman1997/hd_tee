@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    //FlutterStatusbarcolor.setStatusBarColor(Color(0xFF8fd0db));
+    FlutterStatusbarcolor.setStatusBarColor(Colors.black);
     Size screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -71,15 +71,17 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
-              color: Palettes.lightBlue,
+              color: Colors.black,
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     TextViewField(
-                        text: Strings.companyName,
-                        textColor: Colors.black,
-                        textSize: 18)
+                        text: Strings.companyName.toUpperCase(),
+                        textColor: Colors.white,
+                        textSize: 18),
+                    Icon(Icons.favorite),
                   ],
                 ),
               ),
@@ -99,27 +101,57 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               items: imageSliders,
             ),
+            Padding(
+                padding: EdgeInsets.only(
+                    top: screenSize.height * 0.03,
+                    bottom: screenSize.height * 0.02),
+                child: Center(
+                  child: TextViewField(
+                    text: Strings.browseNGet,
+                    textSize: 14,
+                  ),
+                )),
             Expanded(
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                 child: GridView.count(
                     mainAxisSpacing: 20,
                     crossAxisCount: 2,
+                    childAspectRatio:
+                        screenSize.width * 0.5 / screenSize.height * 2.6,
                     children: imgList1
                         .map(
-                          (img) => 
-                              Container(
-                                child: Card(
-                                  elevation: 5,
-                                  semanticContainer: true,
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  child: Image(
-                                    image: img,
-                                    fit: BoxFit.cover,
+                          (img) => Container(child: LayoutBuilder(
+                            builder:
+                                (BuildContext ctx, BoxConstraints constraint) {
+                              return Column(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height:
+                                        MediaQuery.of(ctx).size.height * 0.317,
+                                    width: MediaQuery.of(ctx).size.width,
+                                    child: Card(
+                                      elevation: 5,
+                                      semanticContainer: true,
+                                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                                      child: Image(
+                                        image: img,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              ),
-                          
+                                  Padding(
+                                    padding: EdgeInsets.only(top: 2),
+                                    child: Text('Pastel Yellow T-Shirt', overflow: TextOverflow.ellipsis,),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(top: 2),
+                                    child: Text(r'Price: $100'),
+                                  )
+                                ],
+                              );
+                            },
+                          )),
                         )
                         .toList()),
               ),
@@ -128,24 +160,24 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Palettes.lightBlue,
+        backgroundColor: Colors.black,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
               title: TextViewField(
-                  text: 'Home', textColor: Colors.black, textSize: 15)),
+                  text: 'Home', textColor: Colors.white, textSize: 15)),
           BottomNavigationBarItem(
               icon: Icon(Icons.shop),
               title: TextViewField(
-                  text: 'Cart', textColor: Colors.black, textSize: 15)),
+                  text: 'Cart', textColor: Colors.white, textSize: 15)),
           BottomNavigationBarItem(
               icon: Icon(Icons.more),
               title: TextViewField(
-                  text: 'More', textColor: Colors.black, textSize: 15))
+                  text: 'More', textColor: Colors.white, textSize: 15))
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.brown,
-        unselectedItemColor: Colors.black,
+        selectedItemColor: Colors.orange,
+        unselectedItemColor: Colors.white,
         onTap: _onItemTapped,
       ),
     );

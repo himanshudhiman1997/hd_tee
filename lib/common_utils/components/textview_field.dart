@@ -11,10 +11,9 @@ class TextViewField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Text(
-      text,
-      style:
-          TextStyle(color: textColor, fontSize: textSize, fontFamily: textFont),
-    ));
+        child: Text(text,
+            style: TextStyle(
+                color: textColor, fontSize: textSize, fontFamily: textFont),
+            overflow: TextOverflow.ellipsis));
   }
 }
