@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
-import 'package:hd_tee/HomeScreen/cart_screen.dart';
-import 'package:hd_tee/HomeScreen/home_screen.dart';
-import 'package:hd_tee/HomeScreen/more_screen.dart';
+import 'package:hd_tee/MainScreen/CartScreen/cart_screen.dart';
+import 'package:hd_tee/MainScreen/home_screen.dart';
+import 'package:hd_tee/MainScreen/more_screen.dart';
 import 'package:hd_tee/common_utils/components/textview_field.dart';
 import 'package:hd_tee/common_utils/values/strings.dart';
 import 'package:hd_tee/common_utils/values/palettes.dart';

@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:hd_tee/HomeScreen/header.dart';
+import 'package:hd_tee/MainScreen/header.dart';
 import 'package:hd_tee/common_utils/components/textview_field.dart';
 import 'package:hd_tee/common_utils/values/strings.dart';
 

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hd_tee/HomeScreen/header.dart';
+import 'package:hd_tee/MainScreen/header.dart';
 
-class CartScreen extends StatefulWidget {
+class MoreScreen extends StatefulWidget {
   @override
-  _CartScreenState createState() => _CartScreenState();
+  _MoreScreenState createState() => _MoreScreenState();
 }
 
-class _CartScreenState extends State<CartScreen> {
+class _MoreScreenState extends State<MoreScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +14,7 @@ class _CartScreenState extends State<CartScreen> {
         children: [
           Header(),
           Center(
-            child: Text('Cart'),
+            child: Text('More'),
           )
         ],
       ),

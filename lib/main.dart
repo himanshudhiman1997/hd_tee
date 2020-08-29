@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hd_tee/HomeScreen/main_page.dart';
+import 'package:hd_tee/MainScreen/main_page.dart';
 import 'package:hd_tee/common_utils/values/palettes.dart';
 
 void main() {
