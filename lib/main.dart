@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hd_tee/HomeScreen/home_screen.dart';
+import 'package:hd_tee/HomeScreen/main_page.dart';
 import 'package:hd_tee/common_utils/values/palettes.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         brightness: Brightness.dark
       ),
-      home: HomeScreen(),
+      home: MainPage(),
     );
   }
 }
