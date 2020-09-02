@@ -55,7 +55,6 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Header(),
           CarouselSlider(
             options: CarouselOptions(
               autoPlay: true,
